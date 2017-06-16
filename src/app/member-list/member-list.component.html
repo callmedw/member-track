@@ -1,3 +1,6 @@
-<p>
-  member-list works!
-</p>
+<div *ngFor="let member of members">
+  <div class="panel-body">
+    <img class="profile-pic" src="{{member.image}}">
+    <h3><em>{{member.name}}</em> from {{member.organization}}</h3>
+  </div>
+</div>
