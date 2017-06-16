@@ -1,0 +1,20 @@
+{ "members": [{
+    "name": "Beyonce",
+    "organization": "Beyonce Inc.",
+    "position": "New Member Coordinator",
+    "anniversary": "01/01/2017",
+    "project": "n/a",
+    "mentorship": "available",
+    "bio": "cool stuff",
+    "image": "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2013/12/beyonce-121313.jpg"
+    }, {
+    "name": "Malala Yousafzai",
+    "organization": "Malala Fund",
+    "position": "Education and Outreach Coordinator",
+    "anniversary": "01/01/2017",
+    "project": "n/a",
+    "mentorship": "available",
+    "bio": "cool stuff",
+    "image": "http://prod-upp-image-read.ft.com/b8649f28-6139-11e3-916e-00144feabdc0"
+  }]
+}
