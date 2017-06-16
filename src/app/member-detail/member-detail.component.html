@@ -1,1 +1,11 @@
-<h2>This member has id number: {{memberId}}</h2>
+<div class="profile-panel">
+  <img class="detail-pic" src="{{memberToDisplay.image}}">
+  <div class="profile-info">
+    <h3>{{memberToDisplay.name}}</h3>
+    <h4>{{memberToDisplay.position}}</h4>
+    <p>from: {{memberToDisplay.organization}}</p>
+    <p>{{memberToDisplay.anniversary}}</p>
+    <p>{{memberToDisplay.mentorship}}</p>
+    <p>{{memberToDisplay.bio}}</p>
+  </div>
+</div>

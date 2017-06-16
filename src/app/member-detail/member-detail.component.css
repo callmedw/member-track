@@ -1,0 +1,16 @@
+.detail-pic {
+  height: 364px;
+  width: 688px;
+}
+
+.profile-panel {
+  width: 60%;
+  margin: auto;
+  padding: auto;
+}
+
+.profile-info {
+  width: 50%;
+  margin: auto;
+  /*text-align: center;*/
+}
