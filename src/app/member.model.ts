@@ -6,6 +6,6 @@ export class Member {
     public project: string,
     public mentorship: string,
     public bio: string,
-    public image: string,
-    public id: number) { }
+    public image: string
+  ) { }
 }

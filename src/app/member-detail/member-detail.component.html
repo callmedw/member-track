@@ -1,11 +1,11 @@
 <div class="profile-panel">
-  <img class="detail-pic" src="{{memberToDisplay.image}}">
+  <img class="detail-pic" src="{{(memberToDisplay | async)?.image}}">
   <div class="profile-info">
-    <h3>{{memberToDisplay.name}}</h3>
-    <h4>{{memberToDisplay.position}}</h4>
-    <p>from: {{memberToDisplay.organization}}</p>
-    <p>{{memberToDisplay.anniversary}}</p>
-    <p>{{memberToDisplay.mentorship}}</p>
-    <p>{{memberToDisplay.bio}}</p>
+    <h3>{{(memberToDisplay | async)?.name}}</h3>
+    <h4>{{(memberToDisplay | async)?.position}}</h4>
+    <p>from: {{(memberToDisplay | async)?.organization}}</p>
+    <p>{{(memberToDisplay | async)?.anniversary}}</p>
+    <p>{{(memberToDisplay | async)?.mentorship}}</p>
+    <p>{{(memberToDisplay | async)?.bio}}</p>
   </div>
 </div>
