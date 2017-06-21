@@ -1,1 +1,76 @@
 
+<button class="btn" (click)="beginDeletingMember(selectedMember)">Delete</button>
+
+<button *ngIf="!updateForm" (click)='showUpdateForm()' class="btn">Update Info</button>
+<br>
+
+<div class="panel panel-default">
+  <div *ngIf="updateForm">
+    <div class="panel-body">
+
+      <div class="row">
+  			<div class="col-md-4">
+  				<div class="form-group">
+  					<label>Name:</label>
+  					<input class="form-control" [(ngModel)]="selectedMember.name">
+  				</div>
+  			</div>
+  			<div class="col-md-4">
+  				<div class="form-group">
+  					<label>Organization:</label>
+  					<input class="form-control" [(ngModel)]="selectedMember.organization">
+  				</div>
+  			</div>
+  			<div class="col-md-4">
+  			  <div class="form-group">
+  					<label>Date Joined:</label>
+  					<input class="form-control" [(ngModel)]="selectedMember.anniversary">
+  				</div>
+        </div>
+      </div>
+
+      <div class="row">
+  			<div class="col-md-4">
+          <div class="form-group">
+  					<label>Current Project:</label>
+  					<input class="form-control" [(ngModel)]="selectedMember.project">
+  				</div>
+  			</div>
+        <div class="col-md-4">
+  			  <div class="form-group">
+  					<label>Available for Mentorship:</label>
+  					<input class="form-control" [(ngModel)]="selectedMember.mentorship">
+  				</div>
+  			</div>
+        <div class="col-md-4">
+  				<div class="form-group">
+  					<label>Club Position:</label>
+  					<input class="form-control" [(ngModel)]="selectedMember.position">
+  				</div>
+  			</div>
+      </div>
+
+      <div class="form-group">
+        <label>Image URL:</label>
+        <input class="form-control" [(ngModel)]="selectedMember.image">
+      </div>
+
+      <div class="form-group">
+  			<label>Bio:</label>
+  			<textarea class="form-control" [(ngModel)]="selectedMember.bio"></textarea>
+  		</div>
+
+      <button class="btn" (click)='showUpdateForm()'
+      (click)="beginUpdatingMember(selectedMember);
+      selectedMember.name.value='';
+      selectedMember.organization.value='';
+      selectedMember.anniversary.value='';
+      selectedMember.project.value='';
+      selectedMember.mentorship.value='';
+      selectedMember.position.value='';
+      selectedMember.image.value='';
+      selectedMember.bio.value='';">Update Member</button>
+
+    </div>
+  </div>
+</div>

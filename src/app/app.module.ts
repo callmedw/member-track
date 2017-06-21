@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
 import { UpdateMemberComponent } from './update-member/update-member.component';
+import { MentorPipe } from './mentor.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     MemberDetailComponent,
     AboutComponent,
     AdminComponent,
-    UpdateMemberComponent
+    UpdateMemberComponent,
+    MentorPipe
   ],
   imports: [
     BrowserModule,

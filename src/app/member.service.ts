@@ -23,4 +23,22 @@ export class MemberService {
   getMemberById(memberId: string) {
     return this.database.object('members/' + memberId);
   }
+
+  updateMember(localUpdatedMember) {
+    var memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+    memberEntryInFirebase.update({name: localUpdatedMember.name,
+                                organization: localUpdatedMember.organization,
+                                position: localUpdatedMember.position,
+                                anniversary: localUpdatedMember.anniversary,
+                                project: localUpdatedMember.project,
+                                mentorship: localUpdatedMember.mentorship,
+                                bio: localUpdatedMember.bio,
+                                image: localUpdatedMember.image
+    });
+  }
+
+  deleteMember(localMemberToDelete){
+    var memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+    memberEntryInFirebase.remove();
+  }
 }

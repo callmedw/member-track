@@ -1,7 +1,22 @@
 <h1> Our Members </h1>
-<div *ngFor="let member of members | async" (click)="goToDetailPage(member)">
+
+<h3>Filter by members available for mentorship:</h3>
+<select (change)="onChange($event.target.value)">
+  <option value="All">All Members</option>
+  <option value="Available">Available</option>
+  <option value="Unavailable">Unavailable</option>
+</select>
+
+<div *ngFor="let member of members | async | mentor:filterByMentorship">
   <div class="panel-body">
-    <img class="profile-pic" src="{{member.image}}">
-    <h3><em>{{member.name}}</em> from {{member.organization}}</h3>
+    <img class="profile-pic" (click)="goToDetailPage(member)" src="{{member.image}}">
+    <h3 ><em>{{member.name}}</em> from {{member.organization}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      {{member.position}}
+      <br>
+      <br>
+      <app-update-member [selectedMember]="member"></app-update-member>
+      <hr>
+    </div>
   </div>
 </div>
